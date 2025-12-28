@@ -157,3 +157,6 @@ body{
 .purple img:hover{
     transform: scale(1.2);
 }
+.gallery{
+    color:#171615 ;
+}
