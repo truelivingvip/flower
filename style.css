@@ -33,8 +33,7 @@ body{
     padding: 20px;
 }
 .ourbloom img{
-    width:800px;
-    height:100px;
+    text-align: center;
 }
 .image{
     text-align: center;
@@ -44,6 +43,7 @@ body{
 .photo{
     width: 1200px;
     height:600px;
+    margin-top: -100px;
     /* margin-left: 100px; */
     overflow: hidden;
     text-align: center;
