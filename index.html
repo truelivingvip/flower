@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -41,9 +42,21 @@
     <section class="image">
         <div class="row">
             <div class="col">
-                <video width="100%" height="100%" autoplay muted>
+                <div class="videobox">
+                    <video width="100%" height="100%" loop controls id="xyz">
                     <source src="rose.mp4" type="video/mp4"/>
                 </video>
+                <div class="details">
+                    <ul>
+                        <li><button onclick="myPlay()" id="a"><i class="fa fa-play"></i></button></li>
+                        <li><button onclick="myPause()"><i class="fa fa-pause"></i></button></li>
+                        <li><button onclick="myForward()"><i class="fa fa-forward"></i></button></li>
+                        <li><button onclick="myBackward()"><i class="fa fa-backward"></i></button></li>
+                        <li><button onclick="myMute()"><i class="fa fa-volume-off"></i></button></li>
+                        <li><button onclick="myUnmute()"><i class="fa fa-volume-up"></i></button></li>
+                    </ul>
+                </div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -126,6 +139,33 @@
             </div>
         </div>
     </section>
+    <script>
+        var xyz = document.getElementById("xyz");
+        function myPlay(){
+            if(xyz.paused){
+               xyz.play(); 
+               document.getElementById("a").innerHTML="<i class='fa fa-pause'></i>";
+            }
+            else{
+                xyz.pause();
+            } 
+        }
+        function myPause(){
+            xyz.pause();
+        }
+        function myForward(){
+            xyz.currentTime+=10;
+        }
+        function myBackward(){
+            xyz.currentTime -=10;
+        }
+        function myMute(){
+            xyz.muted=true;
+        }
+        function myUnmute(){
+            xyz.muted=false;
+        }
+    </script>
 </body>
 
 </html>
