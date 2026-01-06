@@ -163,3 +163,22 @@ body{
 .season{
     margin-top: 50px;
 }
+.videobox{
+    position: relative;
+}
+.details{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+.details ul{
+    list-style: none;
+}
+.details ul li{
+    float: left;
+}
+.details ul li .fa{
+    
+    color: red;
+}
